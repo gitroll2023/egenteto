@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from 'react';
 import { QuizState, ResultType } from '@/types/quiz';
-import { questions, results } from '@/data/quizData';
+import { questionsByGender, results } from '@/data/quizData';
 
 const initialState: QuizState = {
   currentQuestion: 0,
@@ -42,6 +42,7 @@ export function useQuiz() {
       }
       
       const nextQuestion = prev.currentQuestion + 1;
+      const questions = prev.gender ? questionsByGender[prev.gender] : questionsByGender.man;
       
       if (nextQuestion >= questions.length) {
         const result = prev.gender ? calculateResult(newAnswers, prev.gender) : null;
@@ -84,6 +85,7 @@ export function useQuiz() {
     setState(initialState);
   }, []);
 
+  const questions = state.gender ? questionsByGender[state.gender] : questionsByGender.man;
   const currentQuestion = questions[state.currentQuestion];
   const currentAnswer = state.answers[state.currentQuestion];
 

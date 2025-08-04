@@ -1,87 +1,174 @@
 import { Question, ResultType } from '@/types/quiz';
 
-export const questions: Question[] = [
-  {
-    id: 1,
-    text: "주말에 뭐하니?",
-    options: [
-      { text: "전시회 가고 분위기 있는 카페 탐방", type: "egen" },
-      { text: "축구 보고 친구들이랑 치맥", type: "teto" }
-    ]
-  },
-  {
-    id: 2,
-    text: "친구 모임에서 나는",
-    options: [
-      { text: "여사친들이랑 수다 떨기", type: "egen" },
-      { text: "고정 멤버 남사친들이랑 노는 중", type: "teto" }
-    ]
-  },
-  {
-    id: 3,
-    text: "유튜브 알고리즘에 뜨는 건",
-    options: [
-      { text: "인디음악, 브이로그, 전시 리뷰", type: "egen" },
-      { text: "주식, 부동산, 스포츠 하이라이트", type: "teto" }
-    ]
-  },
-  {
-    id: 4,
-    text: "운동할 때 나는",
-    options: [
-      { text: "\"오늘은 쉬어도 되겠지...\" (안 감)", type: "egen" },
-      { text: "헬스장 가서 3대 측정", type: "teto" }
-    ]
-  },
-  {
-    id: 5,
-    text: "옷 스타일은",
-    options: [
-      { text: "유니크한 빈티지샵 아이템", type: "egen" },
-      { text: "깔끔한 무지티나 브랜드 로고", type: "teto" }
-    ]
-  },
-  {
-    id: 6,
-    text: "플레이리스트 들어가면",
-    options: [
-      { text: "백예린, 검정치마, 잔나비", type: "egen" },
-      { text: "힙합, EDM, 운동할 때 듣는 노래", type: "teto" }
-    ]
-  },
-  {
-    id: 7,
-    text: "말다툼할 때 나는",
-    options: [
-      { text: "감정적으로 상처받고 울컥함", type: "egen" },
-      { text: "\"그래서 뭐 어쩌라고\" 쿨하게", type: "teto" }
-    ]
-  },
-  {
-    id: 8,
-    text: "알바한다면",
-    options: [
-      { text: "예쁜 카페나 편집샵 알바", type: "egen" },
-      { text: "돈 많이 주는 곳 어디든 OK", type: "teto" }
-    ]
-  },
-  {
-    id: 9,
-    text: "연애할 때 나는",
-    options: [
-      { text: "상대방에게 올인하는 스타일", type: "egen" },
-      { text: "내 생활도 중요한 스타일", type: "teto" }
-    ]
-  },
-  {
-    id: 10,
-    text: "파티 룩 고를 때",
-    options: [
-      { text: "은은하고 분위기 있는 원피스", type: "egen" },
-      { text: "과감한 크롭탑이나 타이트한 옷", type: "teto" }
-    ]
-  }
-];
+export const questionsByGender = {
+  man: [
+    {
+      id: 1,
+      text: "주말에 뭐하니?",
+      options: [
+        { text: "전시회 가고 분위기 있는 카페 탐방", type: "egen" },
+        { text: "축구 보고 친구들이랑 치맥", type: "teto" }
+      ]
+    },
+    {
+      id: 2,
+      text: "친구 모임에서 나는",
+      options: [
+        { text: "여사친들이랑 편하게 어울림", type: "egen" },
+        { text: "고정 멤버 남사친들이랑 노는 중", type: "teto" }
+      ]
+    },
+    {
+      id: 3,
+      text: "유튜브 알고리즘에 뜨는 건",
+      options: [
+        { text: "인디음악, 브이로그, 전시 리뷰", type: "egen" },
+        { text: "주식, 부동산, 스포츠 하이라이트", type: "teto" }
+      ]
+    },
+    {
+      id: 4,
+      text: "운동할 때 나는",
+      options: [
+        { text: "\"오늘은 쉬어도 되겠지...\" (안 감)", type: "egen" },
+        { text: "헬스장 가서 3대 측정", type: "teto" }
+      ]
+    },
+    {
+      id: 5,
+      text: "옷 스타일은",
+      options: [
+        { text: "유니크한 빈티지샵 아이템", type: "egen" },
+        { text: "깔끔한 무지티나 브랜드 로고", type: "teto" }
+      ]
+    },
+    {
+      id: 6,
+      text: "플레이리스트 들어가면",
+      options: [
+        { text: "백예린, 검정치마, 잔나비", type: "egen" },
+        { text: "힙합, EDM, 운동할 때 듣는 노래", type: "teto" }
+      ]
+    },
+    {
+      id: 7,
+      text: "말다툼할 때 나는",
+      options: [
+        { text: "감정적으로 상처받고 울컥함", type: "egen" },
+        { text: "\"그래서 뭐 어쩌라고\" 쿨하게", type: "teto" }
+      ]
+    },
+    {
+      id: 8,
+      text: "알바한다면",
+      options: [
+        { text: "예쁜 카페나 편집샵 알바", type: "egen" },
+        { text: "돈 많이 주는 곳 어디든 OK", type: "teto" }
+      ]
+    },
+    {
+      id: 9,
+      text: "연애할 때 나는",
+      options: [
+        { text: "여친에게 올인하는 스타일", type: "egen" },
+        { text: "내 생활도 중요한 스타일", type: "teto" }
+      ]
+    },
+    {
+      id: 10,
+      text: "그림이나 글쓰기 같은 창작활동",
+      options: [
+        { text: "취미로 즐기는 중", type: "egen" },
+        { text: "관심 없음, 차라리 게임", type: "teto" }
+      ]
+    }
+  ],
+  woman: [
+    {
+      id: 1,
+      text: "주말에 뭐하니?",
+      options: [
+        { text: "감성 카페 가고 전시회 탐방", type: "egen" },
+        { text: "친구들이랑 핫플에서 술 한잔", type: "teto" }
+      ]
+    },
+    {
+      id: 2,
+      text: "친구 모임에서 나는",
+      options: [
+        { text: "여사친들이랑 수다 삼매경", type: "egen" },
+        { text: "남자들 무리에도 거리낌 없이", type: "teto" }
+      ]
+    },
+    {
+      id: 3,
+      text: "유튜브 알고리즘에 뜨는 건",
+      options: [
+        { text: "감성 브이로그, 북카페 추천", type: "egen" },
+        { text: "먹방, 운동 루틴, 리얼리티", type: "teto" }
+      ]
+    },
+    {
+      id: 4,
+      text: "운동할 때 나는",
+      options: [
+        { text: "요가나 필라테스 선호", type: "egen" },
+        { text: "헬스장에서 웨이트 트레이닝", type: "teto" }
+      ]
+    },
+    {
+      id: 5,
+      text: "옷 스타일은",
+      options: [
+        { text: "은은하고 여성스러운 옷", type: "egen" },
+        { text: "과감한 크롭탑이나 핫걸룩", type: "teto" }
+      ]
+    },
+    {
+      id: 6,
+      text: "플레이리스트 들어가면",
+      options: [
+        { text: "백예린, 아이유, 감성 발라드", type: "egen" },
+        { text: "신나는 클럽음악, K-POP", type: "teto" }
+      ]
+    },
+    {
+      id: 7,
+      text: "말다툼할 때 나는",
+      options: [
+        { text: "속상해서 눈물부터 나옴", type: "egen" },
+        { text: "시원하게 할 말 다 함", type: "teto" }
+      ]
+    },
+    {
+      id: 8,
+      text: "이상형은",
+      options: [
+        { text: "감성적이고 대화 통하는 사람", type: "egen" },
+        { text: "듬직하고 리드 잘하는 사람", type: "teto" }
+      ]
+    },
+    {
+      id: 9,
+      text: "연애할 때 나는",
+      options: [
+        { text: "남친에게 올인하는 스타일", type: "egen" },
+        { text: "연애해도 내 생활 지키는 스타일", type: "teto" }
+      ]
+    },
+    {
+      id: 10,
+      text: "파티나 모임에서",
+      options: [
+        { text: "조용히 분위기 즐기기", type: "egen" },
+        { text: "분위기 주도하며 놀기", type: "teto" }
+      ]
+    }
+  ]
+};
+
+// 기본 questions 배열 (호환성을 위해 남성 질문으로 설정)
+export const questions: Question[] = questionsByGender.man;
 
 export const results: Record<string, ResultType> = {
   'egen-man': {

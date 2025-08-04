@@ -61,9 +61,11 @@ export default function Home() {
             </p>
           </div>
           
-          <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed animate-slide-up">
+          <p className="text-sm sm:text-base md:text-lg text-white/70 max-w-2xl mx-auto leading-tight animate-slide-up whitespace-nowrap overflow-hidden text-ellipsis">
             나는 부드러운 매력의 <span className="text-purple-400 font-semibold">에겐</span>? 
-            아니면 터프한 매력의 <span className="text-blue-400 font-semibold">테토</span>?<br />
+            아니면 터프한 매력의 <span className="text-blue-400 font-semibold">테토</span>?
+          </p>
+          <p className="text-sm sm:text-base md:text-lg text-white/70 max-w-2xl mx-auto leading-tight animate-slide-up whitespace-nowrap overflow-hidden text-ellipsis">
             10개의 질문으로 당신의 진짜 성향을 찾아보세요
           </p>
 

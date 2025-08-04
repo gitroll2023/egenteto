@@ -24,7 +24,7 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
       const canvas = await html2canvas(shareableRef.current, {
         scale: 2,
         logging: false,
-      } as any);
+      });
       
       const link = document.createElement('a');
       link.download = `egenteto-${result.type}-result.png`;
@@ -45,7 +45,7 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
           const canvas = await html2canvas(shareableRef.current, {
             scale: 2,
             logging: false,
-          } as any);
+          });
           
           canvas.toBlob(async (blob) => {
             if (blob) {
@@ -58,7 +58,7 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
                   url: shareUrl,
                   files: [file]
                 });
-              } catch (error) {
+              } catch {
                 // 이미지 공유 실패시 텍스트만 공유
                 await navigator.share({
                   title: '에겐 VS 테토 성향 테스트',

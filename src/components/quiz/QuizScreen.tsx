@@ -91,7 +91,7 @@ export default function QuizScreen({
 
           {/* Question */}
           <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
-            <h2 className="text-2xl md:text-3xl font-bold text-white text-center leading-relaxed px-4">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white text-center leading-tight px-2 whitespace-nowrap overflow-hidden text-ellipsis">
               {question.text}
             </h2>
           </div>

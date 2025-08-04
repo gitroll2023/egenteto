@@ -96,17 +96,17 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
             <div className="text-7xl animate-bounce-in">{result.emoji}</div>
             <div className="absolute -inset-4 bg-white/10 rounded-full blur-2xl animate-pulse" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-black text-white">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white text-center whitespace-nowrap">
             당신은 <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">{result.title}</span>
           </h1>
-          <p className="text-xl text-white/80 font-light">{result.subtitle}</p>
+          <p className="text-lg sm:text-xl text-white/80 font-light text-center whitespace-nowrap">{result.subtitle}</p>
         </div>
 
         {/* Description */}
         <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 space-y-3 animate-slide-up hover:border-white/20 transition-all duration-300" 
              style={{ animationDelay: '0.2s' }}>
           {result.description.map((desc, index) => (
-            <p key={index} className="text-white/90 leading-relaxed">
+            <p key={index} className="text-sm sm:text-base text-white/90 leading-relaxed text-center">
               {desc}
             </p>
           ))}
@@ -119,7 +119,7 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
             {result.traits.map((trait, index) => (
               <span
                 key={index}
-                className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm text-white/90 animate-scale-in hover:border-white/30 transition-all duration-300 leading-none"
+                className="inline-flex items-center justify-center px-3 py-2 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-full text-xs sm:text-sm text-white/90 animate-scale-in hover:border-white/30 transition-all duration-300 leading-none whitespace-nowrap"
                 style={{ 
                   animationDelay: `${0.4 + index * 0.05}s`,
                   transform: 'translateY(-0.5px)'
@@ -140,10 +140,10 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
               <span className="text-2xl mt-1">💘</span>
               <div className="flex-1">
                 <p className="text-white/60 text-xs">찰떡궁합</p>
-                <p className="text-white/90 font-medium leading-relaxed">
+                <p className="text-sm sm:text-base text-white/90 font-medium leading-relaxed text-center">
                   {result.compatibility.best.split(' (')[0]}
                   {result.compatibility.best.includes('(') && (
-                    <span className="block text-sm text-white/70 mt-1">
+                    <span className="block text-xs sm:text-sm text-white/70 mt-1 text-center">
                       ({result.compatibility.best.split(' (')[1]}
                     </span>
                   )}
@@ -154,10 +154,10 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
               <span className="text-2xl mt-1">👍</span>
               <div className="flex-1">
                 <p className="text-white/60 text-xs">잘 맞아요</p>
-                <p className="text-white/80 font-medium leading-relaxed">
+                <p className="text-sm sm:text-base text-white/80 font-medium leading-relaxed text-center">
                   {result.compatibility.good.split(' (')[0]}
                   {result.compatibility.good.includes('(') && (
-                    <span className="block text-sm text-white/60 mt-1">
+                    <span className="block text-xs sm:text-sm text-white/60 mt-1 text-center">
                       ({result.compatibility.good.split(' (')[1]}
                     </span>
                   )}
@@ -168,10 +168,10 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
               <span className="text-2xl mt-1">🤔</span>
               <div className="flex-1">
                 <p className="text-white/60 text-xs">노력 필요</p>
-                <p className="text-white/70 font-medium leading-relaxed">
+                <p className="text-sm sm:text-base text-white/70 font-medium leading-relaxed text-center">
                   {result.compatibility.challenging.split(' (')[0]}
                   {result.compatibility.challenging.includes('(') && (
-                    <span className="block text-sm text-white/50 mt-1">
+                    <span className="block text-xs sm:text-sm text-white/50 mt-1 text-center">
                       ({result.compatibility.challenging.split(' (')[1]}
                     </span>
                   )}

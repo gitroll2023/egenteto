@@ -229,7 +229,7 @@ export default function Home() {
                   <span className="text-blue-400 mt-1">•</span>
                   <div>
                     <h4 className="text-white font-semibold mb-1">연애 스타일</h4>
-                    <p className="text-white/70 text-sm">연락 뜸해도 상관없고 각자 생활 중시. "뭐해?" 물으면 "그냥" 대답. 기념일도 크게 안 챙김.</p>
+                    <p className="text-white/70 text-sm">연락 뜸해도 상관없고 각자 생활 중시. &quot;뭐해?&quot; 물으면 &quot;그냥&quot; 대답. 기념일도 크게 안 챙김.</p>
                   </div>
                 </div>
                 

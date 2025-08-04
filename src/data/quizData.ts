@@ -1,6 +1,6 @@
 import { Question, ResultType } from '@/types/quiz';
 
-export const questionsByGender = {
+export const questionsByGender: Record<'man' | 'woman', Question[]> = {
   man: [
     {
       id: 1,

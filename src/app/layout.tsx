@@ -14,12 +14,12 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "에겐 VS 테토 성향 테스트 | 나의 진짜 성격 찾기",
-  description: "나는 에겐남(녀)일까 VS 테토남(녀)일까? 10개의 질문으로 알아보는 성향 테스트. 2.6M+ 참여!",
-  keywords: "에겐, 테토, 성향테스트, 성격테스트, 심리테스트, MBTI",
+  title: "에겐 VS 테토 성향 테스트 | MZ가 말하는 진짜 성격",
+  description: "나는 감성 터지는 에겐? 터프한 매력의 테토? 에스트로겐vs테스토스테론으로 알아보는 내 진짜 성향! 2.6M+ 참여",
+  keywords: "에겐, 테토, 에겐테토, 성향테스트, MZ성격테스트, 에스트로겐, 테스토스테론, 에겐남, 테토남, 에겐녀, 테토녀",
   openGraph: {
-    title: "에겐 VS 테토 성향 테스트",
-    description: "나는 에너지 넘치는 에겐? 차분한 테토? 지금 테스트해보세요!",
+    title: "에겐 VS 테토 성향 테스트 | 너 에겐이야 테토야?",
+    description: "💜에겐: 감성파, 이모티콘 남발, 애교 폭발 VS 💙테토: 단답러, 쿨함 그 자체, 터프함 갑! 10문제로 알아보는 나의 진짜 성향",
     type: "website",
   },
 };

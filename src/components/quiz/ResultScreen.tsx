@@ -22,8 +22,8 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
   const downloadImage = async () => {
     if (shareableRef.current) {
       const canvas = await html2canvas(shareableRef.current, {
-        scale: 2,
-        logging: false,
+        useCORS: true,
+        allowTaint: true,
       });
       
       const link = document.createElement('a');
@@ -43,8 +43,8 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
         // 이미지 캡처
         if (shareableRef.current) {
           const canvas = await html2canvas(shareableRef.current, {
-            scale: 2,
-            logging: false,
+            useCORS: true,
+            allowTaint: true,
           });
           
           canvas.toBlob(async (blob) => {

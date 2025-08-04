@@ -59,8 +59,24 @@ export default function QuizScreen({
     <div className="min-h-screen flex flex-col relative overflow-hidden">
       {/* Background Animation */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 -left-20 w-64 h-64 bg-purple-600/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 -right-20 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        {/* Enhanced gradient circles - more visible */}
+        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-purple-600/25 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-600/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-2/3 left-1/3 w-80 h-80 bg-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/6 right-1/6 w-72 h-72 bg-cyan-500/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }} />
+        
+        {/* More visible floating particles */}
+        <div className="absolute top-1/4 left-1/5 w-3 h-3 bg-white/25 rounded-full animate-ping" style={{ animationDelay: '0s', animationDuration: '4s' }} />
+        <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-white/30 rounded-full animate-ping" style={{ animationDelay: '1s', animationDuration: '3s' }} />
+        <div className="absolute bottom-1/3 left-2/3 w-2.5 h-2.5 bg-white/20 rounded-full animate-ping" style={{ animationDelay: '2s', animationDuration: '5s' }} />
+        <div className="absolute top-3/4 left-1/2 w-2 h-2 bg-purple-400/35 rounded-full animate-ping" style={{ animationDelay: '0.5s', animationDuration: '3.5s' }} />
+        <div className="absolute top-1/6 right-1/3 w-1.5 h-1.5 bg-blue-400/40 rounded-full animate-ping" style={{ animationDelay: '1.5s', animationDuration: '2.5s' }} />
+        <div className="absolute bottom-1/6 left-1/4 w-2 h-2 bg-yellow-400/20 rounded-full animate-ping" style={{ animationDelay: '2.5s', animationDuration: '4s' }} />
+        
+        {/* More noticeable moving elements */}
+        <div className="absolute top-1/3 left-1/6 w-40 h-40 bg-gradient-to-r from-white/15 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '3s' }} />
+        <div className="absolute bottom-1/4 right-1/5 w-36 h-36 bg-gradient-to-l from-white/20 to-transparent rounded-full blur-xl animate-pulse" style={{ animationDelay: '4s' }} />
+        <div className="absolute top-1/2 left-1/2 w-28 h-28 bg-gradient-to-br from-purple-400/10 to-transparent rounded-full blur-2xl animate-pulse" style={{ animationDelay: '5s' }} />
       </div>
 
       {/* Progress Bar - With padding to avoid overlap with exit button */}
@@ -74,8 +90,8 @@ export default function QuizScreen({
           </div>
         </div>
         <div className="flex justify-between px-4 py-2">
-          <span className="text-white/40 text-xs">진행률</span>
-          <span className="text-white/60 text-xs font-medium">{Math.round(progress)}%</span>
+          <span className="text-white/80 text-sm font-medium">진행률</span>
+          <span className="text-white text-sm font-bold">{Math.round(progress)}%</span>
         </div>
       </div>
 
@@ -83,7 +99,7 @@ export default function QuizScreen({
         <div className="max-w-lg w-full space-y-8">
           {/* Question Number Badge */}
           <div className="text-center">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/80 text-sm font-medium">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-bold">
               <span className="w-2 h-2 bg-gradient-to-r from-purple-400 to-blue-400 rounded-full animate-pulse" />
               질문 {currentIndex + 1} / {totalQuestions}
             </span>
@@ -127,8 +143,8 @@ export default function QuizScreen({
                   <span className={`
                     absolute left-6 top-1/2 -translate-y-1/2 text-2xl font-black transition-all duration-300
                     ${isSelected 
-                      ? 'text-white/30' 
-                      : 'text-white/10 group-hover:text-white/20'
+                      ? 'text-white/90' 
+                      : 'text-white/70 group-hover:text-white/90'
                     }
                   `}>
                     {index + 1}

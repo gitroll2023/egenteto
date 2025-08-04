@@ -82,24 +82,24 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-12 relative overflow-hidden">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       </div>
 
-      <div className="max-w-md w-full space-y-8 relative z-10">
+      <div className="max-w-md md:max-w-lg lg:max-w-xl w-full space-y-6 sm:space-y-8 relative z-10">
         {/* Result Title */}
         <div className="text-center space-y-4 animate-slide-up">
           <div className="relative inline-block">
             <div className="text-7xl animate-bounce-in">{result.emoji}</div>
             <div className="absolute -inset-4 bg-white/10 rounded-full blur-2xl animate-pulse" />
           </div>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white text-center whitespace-nowrap">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white text-center md:whitespace-nowrap">
             당신은 <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">{result.title}</span>
           </h1>
-          <p className="text-lg sm:text-xl text-white/80 font-light text-center whitespace-nowrap">{result.subtitle}</p>
+          <p className="text-lg sm:text-xl md:text-2xl text-white/80 font-light text-center md:whitespace-nowrap">{result.subtitle}</p>
           
           {/* 호르몬 타입 표시 */}
           <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
@@ -110,10 +110,10 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
         </div>
 
         {/* Description */}
-        <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 space-y-3 animate-slide-up hover:border-white/20 transition-all duration-300" 
+        <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-5 sm:p-6 md:p-8 space-y-3 animate-slide-up hover:border-white/20 transition-all duration-300" 
              style={{ animationDelay: '0.2s' }}>
           {result.description.map((desc, index) => (
-            <p key={index} className="text-sm sm:text-base text-white/90 leading-relaxed text-center">
+            <p key={index} className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed text-center">
               {desc}
             </p>
           ))}
@@ -126,7 +126,7 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
             {result.traits.map((trait, index) => (
               <span
                 key={index}
-                className="inline-flex items-center justify-center px-3 py-2 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-full text-xs sm:text-sm text-white/90 animate-scale-in hover:border-white/30 transition-all duration-300 leading-none whitespace-nowrap"
+                className="inline-flex items-center justify-center px-3 sm:px-4 py-2 bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-full text-xs sm:text-sm md:text-base text-white/90 animate-scale-in hover:border-white/30 transition-all duration-300 leading-none whitespace-nowrap"
                 style={{ 
                   animationDelay: `${0.4 + index * 0.05}s`,
                   transform: 'translateY(-0.5px)'
@@ -139,7 +139,7 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
         </div>
 
         {/* Compatibility */}
-        <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 space-y-4 animate-slide-up hover:border-white/20 transition-all duration-300"
+        <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-5 sm:p-6 md:p-8 space-y-4 animate-slide-up hover:border-white/20 transition-all duration-300"
              style={{ animationDelay: '0.5s' }}>
           <h3 className="text-white font-bold text-center text-lg mb-4">궁합 분석</h3>
           <div className="space-y-3">
@@ -193,10 +193,10 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
           <button
             onClick={handleShare}
             disabled={isSharing}
-            className="group relative w-full overflow-hidden rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="group relative w-full overflow-hidden rounded-full font-bold text-base sm:text-lg md:text-xl transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-400 transition-all duration-300 group-hover:scale-110" />
-            <span className="relative flex items-center justify-center gap-2 px-8 py-4 text-black">
+            <span className="relative flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-black">
               {isSharing ? (
                 <>
                   <div className="w-5 h-5 border-2 border-black/30 border-t-black rounded-full animate-spin" />
@@ -214,10 +214,10 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
           </button>
           <button
             onClick={() => setShowAnalysisModal(true)}
-            className="group relative w-full overflow-hidden rounded-full font-medium transition-all duration-300 hover:scale-105"
+            className="group relative w-full overflow-hidden rounded-full font-medium text-base sm:text-lg transition-all duration-300 hover:scale-105"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 transition-all duration-300 group-hover:scale-110" />
-            <span className="relative flex items-center justify-center gap-2 px-8 py-4 text-white border border-white/20 rounded-full group-hover:border-white/30">
+            <span className="relative flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-white border border-white/20 rounded-full group-hover:border-white/30">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
@@ -226,10 +226,10 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
           </button>
           <button
             onClick={onRestart}
-            className="group relative w-full overflow-hidden rounded-full font-medium transition-all duration-300 hover:scale-105"
+            className="group relative w-full overflow-hidden rounded-full font-medium text-base sm:text-lg transition-all duration-300 hover:scale-105"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 transition-all duration-300 group-hover:scale-110" />
-            <span className="relative flex items-center justify-center gap-2 px-8 py-4 text-white border border-white/20 rounded-full group-hover:border-white/30">
+            <span className="relative flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-white border border-white/20 rounded-full group-hover:border-white/30">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
               </svg>

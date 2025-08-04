@@ -95,8 +95,8 @@ export default function QuizScreen({
         </div>
       </div>
 
-      <div className="flex-1 flex flex-col items-center justify-center px-4 py-8 relative z-10">
-        <div className="max-w-lg w-full space-y-8">
+      <div className="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 py-8 relative z-10">
+        <div className="max-w-lg md:max-w-2xl w-full space-y-6 sm:space-y-8">
           {/* Question Number Badge */}
           <div className="text-center">
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-bold">
@@ -107,13 +107,13 @@ export default function QuizScreen({
 
           {/* Question */}
           <div className={`transition-all duration-500 ${isAnimating ? 'opacity-0 translate-y-4' : 'opacity-100 translate-y-0'}`}>
-            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white text-center leading-tight px-2 whitespace-nowrap overflow-hidden text-ellipsis">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white text-center leading-tight px-2 md:whitespace-nowrap overflow-hidden text-ellipsis">
               {question.text}
             </h2>
           </div>
 
           {/* Options */}
-          <div className="space-y-4 mt-12">
+          <div className="space-y-3 sm:space-y-4 mt-8 sm:mt-10 md:mt-12">
             {question.options.map((option, index) => {
               const isEgen = option.type === 'egen';
               const isSelected = selectedOption === index;
@@ -124,7 +124,7 @@ export default function QuizScreen({
                   onClick={() => handleSelect(index, option.type)}
                   disabled={false}
                   className={`
-                    group relative w-full p-6 text-left rounded-2xl transition-all duration-300
+                    group relative w-full p-4 sm:p-5 md:p-6 text-left rounded-2xl transition-all duration-300
                     ${isSelected 
                       ? isEgen 
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white scale-[0.98] shadow-2xl shadow-purple-500/25' 
@@ -141,7 +141,7 @@ export default function QuizScreen({
                 >
                   {/* Option Number */}
                   <span className={`
-                    absolute left-6 top-1/2 -translate-y-1/2 text-2xl font-black transition-all duration-300
+                    absolute left-4 sm:left-5 md:left-6 top-1/2 -translate-y-1/2 text-xl sm:text-2xl font-black transition-all duration-300
                     ${isSelected 
                       ? 'text-white/90' 
                       : 'text-white/70 group-hover:text-white/90'
@@ -151,7 +151,7 @@ export default function QuizScreen({
                   </span>
                   
                   {/* Option Text */}
-                  <span className="text-lg font-medium pl-12 pr-4 block">
+                  <span className="text-base sm:text-lg md:text-xl font-medium pl-10 sm:pl-12 pr-3 sm:pr-4 block">
                     {option.text}
                   </span>
 
@@ -176,11 +176,11 @@ export default function QuizScreen({
           </div>
 
           {/* Navigation Buttons */}
-          <div className="mt-8 flex justify-center gap-4">
+          <div className="mt-6 sm:mt-8 flex justify-center gap-3 sm:gap-4">
             {canGoPrevious && (
               <button
                 onClick={onPrevious}
-                className="flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all duration-300 hover:scale-105"
+                className="flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -192,7 +192,7 @@ export default function QuizScreen({
             {currentAnswer && selectedOption !== null && (
               <button
                 onClick={handleNext}
-                className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-full transition-all duration-300 hover:scale-105"
+                className="flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white rounded-full transition-all duration-300 hover:scale-105 text-sm sm:text-base"
               >
                 다음 질문
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

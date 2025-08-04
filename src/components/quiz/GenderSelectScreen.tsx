@@ -22,30 +22,30 @@ export default function GenderSelectScreen({ onSelect }: GenderSelectScreenProps
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 relative overflow-hidden">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-32 h-32 bg-purple-600/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-blue-600/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       </div>
 
-      <div className="max-w-md w-full text-center space-y-8 relative z-10">
+      <div className="max-w-md md:max-w-lg lg:max-w-xl w-full text-center space-y-6 sm:space-y-8 relative z-10">
         {/* Title */}
         <div className={`space-y-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h1 className="text-3xl md:text-4xl font-bold text-white">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
             당신의 성별을 선택해주세요
           </h1>
-          <p className="text-lg text-white/70">
+          <p className="text-base sm:text-lg md:text-xl text-white/70">
             더 정확한 결과를 위해 필요해요
           </p>
         </div>
 
         {/* Gender Options */}
-        <div className={`grid grid-cols-2 gap-6 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <button
             onClick={() => handleSelect('man')}
             className={`
-              group relative overflow-hidden rounded-3xl p-8 transition-all duration-300
+              group relative overflow-hidden rounded-3xl p-6 sm:p-8 md:p-10 transition-all duration-300
               ${selectedGender === 'man' 
                 ? 'bg-gradient-to-br from-blue-600 to-cyan-600 scale-95' 
                 : 'bg-white/10 hover:bg-white/20 border border-white/20'
@@ -53,9 +53,9 @@ export default function GenderSelectScreen({ onSelect }: GenderSelectScreenProps
             `}
           >
             <div className="space-y-4">
-              <div className="text-5xl">👨</div>
-              <h3 className="text-xl font-bold text-white">남자</h3>
-              <p className="text-white/80 text-sm">에겐남 / 테토남</p>
+              <div className="text-4xl sm:text-5xl md:text-6xl">👨</div>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white">남자</h3>
+              <p className="text-white/80 text-xs sm:text-sm md:text-base">에겐남 / 테토남</p>
             </div>
             {selectedGender === 'man' && (
               <div className="absolute inset-0 bg-white/20 animate-pulse" />
@@ -65,7 +65,7 @@ export default function GenderSelectScreen({ onSelect }: GenderSelectScreenProps
           <button
             onClick={() => handleSelect('woman')}
             className={`
-              group relative overflow-hidden rounded-3xl p-8 transition-all duration-300
+              group relative overflow-hidden rounded-3xl p-6 sm:p-8 md:p-10 transition-all duration-300
               ${selectedGender === 'woman' 
                 ? 'bg-gradient-to-br from-pink-600 to-purple-600 scale-95' 
                 : 'bg-white/10 hover:bg-white/20 border border-white/20'
@@ -73,9 +73,9 @@ export default function GenderSelectScreen({ onSelect }: GenderSelectScreenProps
             `}
           >
             <div className="space-y-4">
-              <div className="text-5xl">👩</div>
-              <h3 className="text-xl font-bold text-white">여자</h3>
-              <p className="text-white/80 text-sm">에겐녀 / 테토녀</p>
+              <div className="text-4xl sm:text-5xl md:text-6xl">👩</div>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white">여자</h3>
+              <p className="text-white/80 text-xs sm:text-sm md:text-base">에겐녀 / 테토녀</p>
             </div>
             {selectedGender === 'woman' && (
               <div className="absolute inset-0 bg-white/20 animate-pulse" />
@@ -84,7 +84,7 @@ export default function GenderSelectScreen({ onSelect }: GenderSelectScreenProps
         </div>
 
         {/* Info */}
-        <p className={`text-white/50 text-xs mt-8 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+        <p className={`text-white/50 text-xs sm:text-sm mt-6 sm:mt-8 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           성별 정보는 결과 분석에만 사용됩니다
         </p>
       </div>

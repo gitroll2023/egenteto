@@ -179,7 +179,7 @@ export default function Home() {
                   <span className="text-purple-400 mt-1">•</span>
                   <div>
                     <h4 className="text-white font-semibold mb-1">연애 스타일</h4>
-                    <p className="text-white/70 text-sm">애정표현이 풍부하고 로맨틱한 분위기를 좋아합니다. 기념일을 챙기고 작은 선물로 마음을 표현하는 걸 즐깁니다.</p>
+                    <p className="text-white/70 text-sm">100일, 200일 다 챙기고 이벤트 준비하는 로맨틱 스타일. 연락 뜸하면 불안해하고 애정표현 없으면 서운해함.</p>
                   </div>
                 </div>
                 
@@ -187,7 +187,7 @@ export default function Home() {
                   <span className="text-purple-400 mt-1">•</span>
                   <div>
                     <h4 className="text-white font-semibold mb-1">소통 방식</h4>
-                    <p className="text-white/70 text-sm">이모티콘과 애교 섞인 말투를 자주 사용하며, 상대방의 감정에 공감하고 위로하는 데 능숙합니다.</p>
+                    <p className="text-white/70 text-sm">ㅠㅠ ㅜㅜ 자주 쓰고 이모티콘 남발. 긴 문장으로 감정 표현하고 상대방 감정 눈치 보는 편.</p>
                   </div>
                 </div>
                 
@@ -195,7 +195,7 @@ export default function Home() {
                   <span className="text-purple-400 mt-1">•</span>
                   <div>
                     <h4 className="text-white font-semibold mb-1">취미 활동</h4>
-                    <p className="text-white/70 text-sm">요가, 필라테스 같은 정적인 운동을 선호하고, 카페에서 수다 떨기, 쇼핑, 감성적인 영화 보기를 즐깁니다.</p>
+                    <p className="text-white/70 text-sm">전시회, 북카페, 감성 맛집 탐방. 필라테스는 등록만 하고 안 감. 친구들이랑 카페에서 4시간 수다.</p>
                   </div>
                 </div>
                 
@@ -203,7 +203,7 @@ export default function Home() {
                   <span className="text-purple-400 mt-1">•</span>
                   <div>
                     <h4 className="text-white font-semibold mb-1">특징</h4>
-                    <p className="text-white/70 text-sm">처음 보는 사람에게는 수줍어하지만, 친해지면 애교가 많아집니다. 감정 기복이 있을 수 있고, 관심과 사랑을 받는 걸 좋아합니다.</p>
+                    <p className="text-white/70 text-sm">처음엔 조용한데 친해지면 찐친 모드. MBTI 맹신하고 감정 기복 심함. 관심 받는 거 좋아함.</p>
                   </div>
                 </div>
               </div>
@@ -229,7 +229,7 @@ export default function Home() {
                   <span className="text-blue-400 mt-1">•</span>
                   <div>
                     <h4 className="text-white font-semibold mb-1">연애 스타일</h4>
-                    <p className="text-white/70 text-sm">독립적이고 자유로운 연애를 추구합니다. 서로의 개인 시간을 존중하며, 집착하지 않는 쿨한 관계를 선호합니다.</p>
+                    <p className="text-white/70 text-sm">연락 뜸해도 상관없고 각자 생활 중시. "뭐해?" 물으면 "그냥" 대답. 기념일도 크게 안 챙김.</p>
                   </div>
                 </div>
                 
@@ -237,7 +237,7 @@ export default function Home() {
                   <span className="text-blue-400 mt-1">•</span>
                   <div>
                     <h4 className="text-white font-semibold mb-1">소통 방식</h4>
-                    <p className="text-white/70 text-sm">단답형 대화를 선호하고 핵심만 간단히 전달합니다. 할 말은 직설적으로 하지만 뒤끝은 없습니다.</p>
+                    <p className="text-white/70 text-sm">ㅇㅇ ㄱㄱ ㅇㅋ 단답 마스터. 이모티콘 거의 안 씀. TMI 싫어하고 핵심만 말함.</p>
                   </div>
                 </div>
                 
@@ -245,7 +245,7 @@ export default function Home() {
                   <span className="text-blue-400 mt-1">•</span>
                   <div>
                     <h4 className="text-white font-semibold mb-1">취미 활동</h4>
-                    <p className="text-white/70 text-sm">헬스, 복싱, 농구 등 활동적인 운동을 즐기고, 게임이나 혼자만의 시간을 갖는 것도 좋아합니다.</p>
+                    <p className="text-white/70 text-sm">헬스장에서 3대 측정, 축구 보면서 치맥. 게임하거나 유튜브로 주식 강의 보기.</p>
                   </div>
                 </div>
                 
@@ -253,7 +253,7 @@ export default function Home() {
                   <span className="text-blue-400 mt-1">•</span>
                   <div>
                     <h4 className="text-white font-semibold mb-1">특징</h4>
-                    <p className="text-white/70 text-sm">리더십이 강하고 결단력이 있습니다. 의리를 중시하고, 자기 관리에 철저하며, 목표 지향적인 성격입니다.</p>
+                    <p className="text-white/70 text-sm">뭐든 빠르게 결정하고 추진력 갑. 의리 중시하고 친구 모임 안 빠짐. 루틴 철저히 지킴.</p>
                   </div>
                 </div>
               </div>

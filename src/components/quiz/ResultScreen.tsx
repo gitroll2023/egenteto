@@ -100,6 +100,13 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
             당신은 <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">{result.title}</span>
           </h1>
           <p className="text-lg sm:text-xl text-white/80 font-light text-center whitespace-nowrap">{result.subtitle}</p>
+          
+          {/* 호르몬 타입 표시 */}
+          <div className="mt-4 inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
+            <span className="text-sm font-medium text-white/90">
+              {result.type.includes('egen') ? '💜 에스트로겐 우세형' : '💙 테스토스테론 우세형'}
+            </span>
+          </div>
         </div>
 
         {/* Description */}

@@ -62,26 +62,26 @@ export default function Home() {
           </div>
           
           <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed animate-slide-up">
-            나는 에너지 넘치는 <span className="text-purple-400 font-semibold">에겐</span>? 
-            아니면 차분한 <span className="text-blue-400 font-semibold">테토</span>?<br />
+            나는 부드러운 매력의 <span className="text-purple-400 font-semibold">에겐</span>? 
+            아니면 터프한 매력의 <span className="text-blue-400 font-semibold">테토</span>?<br />
             10개의 질문으로 당신의 진짜 성향을 찾아보세요
           </p>
 
           {/* Character Cards - Simple 1x2 */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-2xl mx-auto mt-6">
             <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-purple-900/30 to-pink-900/30 backdrop-blur-sm border border-purple-500/20 rounded-full hover:scale-105 transition-transform">
-              <span className="text-2xl">🌟</span>
+              <span className="text-2xl">💕</span>
               <div>
                 <h3 className="text-white font-bold">에겐</h3>
-                <p className="text-white/70 text-sm">외향적 · 활발 · 사교적</p>
+                <p className="text-white/70 text-sm">부드러움 · 감성적 · 애교</p>
               </div>
             </div>
 
             <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-900/30 to-cyan-900/30 backdrop-blur-sm border border-blue-500/20 rounded-full hover:scale-105 transition-transform">
-              <span className="text-2xl">🌙</span>
+              <span className="text-2xl">🔥</span>
               <div>
                 <h3 className="text-white font-bold">테토</h3>
-                <p className="text-white/70 text-sm">내향적 · 신중 · 차분함</p>
+                <p className="text-white/70 text-sm">터프함 · 독립적 · 쿨함</p>
               </div>
             </div>
           </div>

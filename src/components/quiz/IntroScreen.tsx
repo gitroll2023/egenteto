@@ -50,10 +50,16 @@ export default function IntroScreen({ onStart }: IntroScreenProps) {
               <span className="text-2xl">🎯</span>
               10개의 질문으로 알아보는 나의 성향
             </p>
-            <p className="text-white/70 text-sm leading-relaxed">
-              에너지 넘치는 에겐? 차분한 테토?<br />
-              당신의 진짜 성격을 찾아드립니다
-            </p>
+            <div className="text-white/70 text-sm leading-relaxed space-y-2">
+              <p>
+                <span className="text-purple-400 font-semibold">에겐</span>: 부드럽고 여성적인 매력<br />
+                <span className="text-xs text-white/50">(애교, 감성적, 표현이 풍부한 타입)</span>
+              </p>
+              <p>
+                <span className="text-blue-400 font-semibold">테토</span>: 터프하고 남성적인 매력<br />
+                <span className="text-xs text-white/50">(쿨함, 독립적, 행동파 타입)</span>
+              </p>
+            </div>
           </div>
 
           <div className="flex items-center justify-center gap-6 text-white/60 text-sm">

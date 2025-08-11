@@ -82,7 +82,7 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 relative overflow-hidden">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 relative overflow-x-hidden overflow-y-auto">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-full blur-3xl animate-pulse" />
@@ -191,6 +191,31 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
         {/* Action Buttons */}
         <div className="space-y-3 animate-slide-up pt-4" style={{ animationDelay: '0.6s' }}>
           <button
+            onClick={() => setShowAnalysisModal(true)}
+            className="group relative w-full overflow-hidden rounded-full font-bold text-base sm:text-lg transition-all duration-300 hover:scale-105 animate-pulse-glow"
+          >
+            {/* Glowing background effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 opacity-75 animate-gradient-shift" />
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 to-pink-600/40 blur-xl animate-pulse" />
+            
+            {/* Sparkle effects */}
+            <div className="absolute top-2 left-4 w-2 h-2 bg-white rounded-full animate-sparkle opacity-0" />
+            <div className="absolute bottom-3 right-6 w-1.5 h-1.5 bg-white rounded-full animate-sparkle opacity-0" style={{ animationDelay: '0.3s' }} />
+            <div className="absolute top-3 right-8 w-1 h-1 bg-white rounded-full animate-sparkle opacity-0" style={{ animationDelay: '0.6s' }} />
+            
+            <span className="relative flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-white font-bold">
+              {/* Lightning icon */}
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              심층 분석
+            </span>
+          </button>
+          
+          {/* 여백 추가 */}
+          <div className="h-4"></div>
+          
+          <button
             onClick={handleShare}
             disabled={isSharing}
             className="group relative w-full overflow-hidden rounded-full font-bold text-base sm:text-lg md:text-xl transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
@@ -210,18 +235,6 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
                   결과 공유하기
                 </>
               )}
-            </span>
-          </button>
-          <button
-            onClick={() => setShowAnalysisModal(true)}
-            className="group relative w-full overflow-hidden rounded-full font-medium text-base sm:text-lg transition-all duration-300 hover:scale-105"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 transition-all duration-300 group-hover:scale-110" />
-            <span className="relative flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-white border border-white/20 rounded-full group-hover:border-white/30">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              심층 분석
             </span>
           </button>
           <button
@@ -278,29 +291,88 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
 
       {/* Analysis Modal */}
       {showAnalysisModal && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 px-4">
+        <div className="fixed inset-0 bg-black/80 flex items-start justify-center z-50 px-4 overflow-y-auto py-4">
           <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-3xl p-8 max-w-md w-full animate-scale-in">
-            <h3 className="text-2xl font-bold text-white text-center mb-6">
-              심층 분석을 원하시나요? 🤔
-            </h3>
-            <div className="text-white/80 text-center space-y-4 mb-8">
-              <p>
-                자신을 더 깊이 이해하고 싶다면,<br />
-                수업을 열심히 들어보세요! 📚
-              </p>
-              <p className="text-lg font-medium text-yellow-400">
-                열심히 공부하면 자신을 더 잘 알 수 있어요 ✨
-              </p>
-              <p className="text-sm text-white/60">
-                지식이 쌓일수록 나에 대한 이해도 깊어집니다
+            <div className="text-center mb-6">
+              <span className="inline-block text-5xl mb-4 animate-bounce">🔍</span>
+              <h3 className="text-2xl font-bold text-white mb-2">
+                당신이 몰랐던 진짜 나를 만나보세요
+              </h3>
+              <p className="text-white/70 text-sm">
+                단순한 성격 테스트를 넘어선 깊이 있는 자기 탐구
               </p>
             </div>
-            <button
-              onClick={() => setShowAnalysisModal(false)}
-              className="w-full py-3 px-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-full hover:scale-105 transition-all duration-300"
-            >
-              알겠습니다!
-            </button>
+            
+            {/* 이미지 추가 */}
+            <div className="mb-6 rounded-xl overflow-hidden bg-white/5">
+              <img 
+                src="/poster.jpg" 
+                alt="경협치 에겐과 테토들의 도전기" 
+                className="w-full h-auto object-cover"
+                onError={(e) => {
+                  console.error('Image failed to load:', e);
+                  (e.target as HTMLImageElement).style.display = 'none';
+                }}
+              />
+            </div>
+            
+            <div className="text-white/90 space-y-4 mb-8">
+              <div className="bg-white/10 rounded-xl p-4 border border-white/20">
+                <p className="text-lg font-bold mb-2 text-yellow-400">
+                  🧠 왜 나는 이런 선택을 할까?
+                </p>
+                <p className="text-sm text-white/80">
+                  호르몬이 당신의 연애 스타일에 미치는<br />
+                  숨겨진 영향력을 과학적으로 풀어드립니다
+                </p>
+              </div>
+              
+              <div className="bg-white/10 rounded-xl p-4 border border-white/20">
+                <p className="text-lg font-bold mb-2 text-pink-400">
+                  💭 내가 정말 원하는 건 뭘까?
+                </p>
+                <p className="text-sm text-white/80">
+                  무의식 속 진짜 욕구와 니즈를 발견하고<br />
+                  나만의 행복한 연애 공식을 찾아보세요
+                </p>
+              </div>
+              
+              <div className="bg-white/10 rounded-xl p-4 border border-white/20">
+                <p className="text-lg font-bold mb-2 text-purple-400">
+                  ✨ 나도 몰랐던 나의 매력은?
+                </p>
+                <p className="text-sm text-white/80">
+                  숨겨진 강점을 발견하고 자존감을 높여<br />
+                  더 매력적인 나로 거듭나는 방법
+                </p>
+              </div>
+            </div>
+            
+            <div className="text-center mb-6">
+              <p className="text-white/60 text-xs mb-2">
+                지금 신청하는 분들께만 제공되는 특별한 기회
+              </p>
+              <p className="text-yellow-400 font-bold animate-pulse">
+                ⏰ 선착순 마감 임박!
+              </p>
+            </div>
+            
+            <div className="space-y-3">
+              <button
+                onClick={() => {
+                  window.location.href = 'https://smore.im/form/GWYTZIyuK8';
+                }}
+                className="w-full py-4 px-6 bg-gradient-to-r from-yellow-400 to-orange-400 text-black font-bold rounded-full hover:scale-105 transition-all duration-300 text-lg shadow-lg"
+              >
+                나를 찾아 떠나는 여정 시작하기 →
+              </button>
+              <button
+                onClick={() => setShowAnalysisModal(false)}
+                className="w-full py-3 px-6 bg-white/10 text-white/60 font-medium rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 text-sm"
+              >
+                다음에 알아볼게요
+              </button>
+            </div>
           </div>
         </div>
       )}

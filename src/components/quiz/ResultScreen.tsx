@@ -294,12 +294,12 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
         <div className="fixed inset-0 bg-black/80 flex items-start justify-center z-50 px-4 overflow-y-auto py-4">
           <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-3xl p-8 max-w-md w-full animate-scale-in">
             <div className="text-center mb-6">
-              <span className="inline-block text-5xl mb-4 animate-bounce">🔍</span>
+              <span className="inline-block text-5xl mb-4 animate-bounce">💪</span>
               <h3 className="text-2xl font-bold text-white mb-2">
-                당신이 몰랐던 진짜 나를 만나보세요
+                당신의 연애에 참견해드립니다
               </h3>
               <p className="text-white/70 text-sm">
-                단순한 성격 테스트를 넘어선 깊이 있는 자기 탐구
+                에겐과 테토들의 현실 연애 도전기
               </p>
             </div>
             
@@ -319,41 +319,41 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
             <div className="text-white/90 space-y-4 mb-8">
               <div className="bg-white/10 rounded-xl p-4 border border-white/20">
                 <p className="text-lg font-bold mb-2 text-yellow-400">
-                  🧠 왜 나는 이런 선택을 할까?
+                  🎯 에겐 vs 테토, 당신은?
                 </p>
                 <p className="text-sm text-white/80">
-                  호르몬이 당신의 연애 스타일에 미치는<br />
-                  숨겨진 영향력을 과학적으로 풀어드립니다
+                  감성파와 이성파의 치열한 대결!<br />
+                  당신의 진짜 성향을 파헤쳐드립니다
                 </p>
               </div>
               
               <div className="bg-white/10 rounded-xl p-4 border border-white/20">
                 <p className="text-lg font-bold mb-2 text-pink-400">
-                  💭 내가 정말 원하는 건 뭘까?
+                  💕 연애 스타일 완벽 분석
                 </p>
                 <p className="text-sm text-white/80">
-                  무의식 속 진짜 욕구와 니즈를 발견하고<br />
-                  나만의 행복한 연애 공식을 찾아보세요
+                  나의 연애 패턴과 상대방 공략법<br />
+                  꿀팁까지 한 번에 정리!
                 </p>
               </div>
               
               <div className="bg-white/10 rounded-xl p-4 border border-white/20">
                 <p className="text-lg font-bold mb-2 text-purple-400">
-                  ✨ 나도 몰랐던 나의 매력은?
+                  👁️ 전지적 연애 시점
                 </p>
                 <p className="text-sm text-white/80">
-                  숨겨진 강점을 발견하고 자존감을 높여<br />
-                  더 매력적인 나로 거듭나는 방법
+                  당신의 연애를 제3자 시점으로<br />
+                  객관적으로 분석해드립니다!
                 </p>
               </div>
             </div>
             
             <div className="text-center mb-6">
               <p className="text-white/60 text-xs mb-2">
-                지금 신청하는 분들께만 제공되는 특별한 기회
+                전지적 연애 시점으로 보는
               </p>
               <p className="text-yellow-400 font-bold animate-pulse">
-                ⏰ 선착순 마감 임박!
+                🔥 나의 연애 스타일 완벽 분석!
               </p>
             </div>
             
@@ -364,13 +364,13 @@ export default function ResultScreen({ result, onRestart }: ResultScreenProps) {
                 }}
                 className="w-full py-4 px-6 bg-gradient-to-r from-yellow-400 to-orange-400 text-black font-bold rounded-full hover:scale-105 transition-all duration-300 text-lg shadow-lg"
               >
-                나를 찾아 떠나는 여정 시작하기 →
+                에겐테토 전체 분석 받기 →
               </button>
               <button
                 onClick={() => setShowAnalysisModal(false)}
                 className="w-full py-3 px-6 bg-white/10 text-white/60 font-medium rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 text-sm"
               >
-                다음에 알아볼게요
+                나중에 볼게요
               </button>
             </div>
           </div>
